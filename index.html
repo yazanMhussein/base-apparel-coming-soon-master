@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="mainBody">
+    
+    <img class="logoImg" src="./images/logo.svg" alt="logo image">
+  <div class="leftSide">
+      
+      
+      <h1 class="headerText"> <span class="pink"> We're</span><strong><br> coming<br>soon</br></strong></h1>
+  <p class="subText"> Hello fellow shoppers! We're currently building our new fashion store. 
+  Add your email below to stay up-to-date with announcements and our launch deals.</p>
+ <div>
+  <form class="formMain"  method="get"> 
+     <input type="text" name="email" id="email" placeholder="Email Address" > 
+    <!-- in css use ::placeholder to change the style -->
+    <button name="button" class="button" type="submit">
+      <img class="arrowImg" src="./images/icon-arrow.svg" alt="arrow image inside the button">
+    </button>
+    <img class="errorImg" src="./images/icon-error.svg" alt="">
+
+    <p class="errorText">Please provide a valid email</p>
+    </form>
+   </div> 
+  </div>
+  <div class="rightSide">
+    <picture>
+      <source media="(min-width: 768px)" srcset="./images/hero-desktop.jpg">
+      <img class="mainImg" src="./images/hero-mobile.jpg" alt="mainImg">
+    </picture>  
+  </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

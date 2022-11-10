@@ -1,0 +1,153 @@
+:root{
+    --color-primary-offRed:hsl(0, 36%, 70%);
+    --color-primary-midRed:hsl(0, 93%, 68%);
+    --color-neutral-darkRed:hsl(0, 6%, 24%);
+    --color-Linear-pinkMixLight:rgb(248,191,191);
+    --background-linear-colorPink: linear-gradient(135deg, rgba(248,191,191,1) 0%, rgba(238,140,140,1) 100%);
+    --color-Linear-pinkMixWhite: rgb(255,255,255);
+    --background-linear-colorWhite: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,245,245,1) 100%);
+   
+    --ff: 'Josefin Sans', sans-serif;
+    --ff-Size:16px;
+    --fw-300:300;
+    --fw-400:400;
+    --fw-600:600;
+}
+html{
+    box-sizing: border-box;
+    font-size: 100% ;
+}
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+body{
+    font-family: var(--ff);
+    background-color: var(--background-linear-colorPink);
+    font-size: var(--ff-Size);
+    height: 100vh;    
+}
+.mainBody{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+
+.rightSide{
+    grid-row-start: 2;
+    container-type: inline-size;
+}
+
+.leftSide{
+    margin: 10%;
+}
+.logoImg{
+    margin: 2rem;
+}
+.headerText{
+    color: var(--color-neutral-darkRed);
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 10%;
+}
+.pink{
+    color: var(--color-Linear-pinkMixLight);
+    }
+.subText{
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--color-primary-offRed);
+    font-weight: var(--fw-400);
+    line-height: 2rem;
+}
+.formMain{
+    text-align: center;
+    margin: 15% 0%;
+}
+/* email 
+is the box/border we can change some of it styles*/
+#email{
+    border-style: solid;
+    border-color:var(--color-primary-offRed);
+    padding: 1rem;
+    border-radius: 25px;
+    width: 100%;
+}
+::placeholder{
+    color: var(--color-Linear-pinkMixLight);
+}
+.button{
+    background: var(--background-linear-colorPink); 
+    color:  #fff5f5;  
+    padding: .9rem;
+    border-radius: 25px;
+    width: 20%;
+    z-index: 2;
+    position: absolute;
+    right: 10%;
+    border-style: none;
+    cursor: pointer;
+    
+}
+.errorImg{
+    visibility: hidden;
+    padding: 0.5rem;
+    width: 3.5rem;
+    z-index: 2;
+    position: absolute;
+    right: 28%;
+
+}
+.errorText{
+    visibility: hidden;
+    margin-top: 5%;
+    text-align: start;
+    color: var(--color-primary-midRed);
+}
+
+@media screen and (min-width:768px) {
+    body{background-image:url(./images/bg-pattern-desktop.svg);}
+    .mainBody{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .rightSide{
+        grid-row-start: 1;
+        grid-column-start: 2;
+        margin-left: 15%;
+        margin-bottom: 0px;
+    }
+    .logoImg {
+        grid-row-start: 1;
+        grid-column-start: 1;
+        justify-self: center;
+        margin-top: 10%;
+    }
+    .leftSide{
+        grid-row-start: 1;
+        grid-column-start: 1;
+        margin-top: 30%;
+        margin-bottom: 0px;
+        align-self: center;
+    }
+    .headerText{
+        font-size: 4rem;
+    }
+    .subText{
+        font-size: 1.8rem;
+    }
+    .button{
+        left: 30%;
+        padding: 1rem;
+    }
+    .formMain{
+        margin: 10% 0%;
+    }
+    #email{
+        font-size: 1rem;
+    }
+    .errorImg{
+        right: 70%;
+    
+    }
+}
